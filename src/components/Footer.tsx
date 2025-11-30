@@ -19,24 +19,24 @@ const Footer = ({arrowClassName} : {arrowClassName?: string}) => {
           <div className="px-5 space-y-2">
             <Logo />
             <SubText>
-              Discover curated furniture collections at Shopcartyt, blending
-              style and comfort to elevate your living spaces.
+              Discover the perfect fit for your style and elevate your wardrobe.
+              LENIANT is here to make your wardrobe shine.
             </SubText>
             <SocialIcons
               className="text-darkColor/60 mt-0"
               iconClassname="text-leniant"
-              tooltipClassname="bg-black text-white"
+              tooltipClassname="bg-leniant text-white"
               arrowClassName='bg-black fill-black'
             />
           </div>
           <div className='px-5'>
-            <SubTitle>Important Links</SubTitle>
+            <SubTitle className='hover:translate-x-0.5 hovereffect cursor-pointer hover:text-leniant'>Important Links</SubTitle>
             <ul className="space-y-3 mt-4">
               {quickLinksData?.map((item) => (
                 <li key={item?.title}>
                   <Link
                     href={item?.href}
-                    className="hover:text-shop_light_green hoverEffect font-medium"
+                    className="hover:text-leniant hovereffect font-medium"
                   >
                     {item?.title}
                   </Link>
@@ -45,13 +45,13 @@ const Footer = ({arrowClassName} : {arrowClassName?: string}) => {
             </ul>
           </div>
           <div className='px-5'>
-            <SubTitle>Links</SubTitle>
+            <SubTitle className='hover:translate-x-0.5 hovereffect cursor-pointer hover:text-leniant'>Links</SubTitle>
             <ul className="space-y-3 mt-4">
               {categoriesData?.map((item) => (
                 <li key={item?.title}>
                   <Link
-                    href={`/category/${item?.href}`}
-                    className="hover:text-shop_light_green hoverEffect font-medium"
+                    href={item?.href}
+                    className="hover:text-leniant hovereffect font-medium"
                   >
                     {item?.title}
                   </Link>
@@ -67,7 +67,7 @@ const Footer = ({arrowClassName} : {arrowClassName?: string}) => {
             </SubText>
             <form className="space-y-3">
               <Input placeholder="Enter your email" type="email" required />
-              <Button className="w-full">Subscribe</Button>
+              <Button className="w-full hovereffect hover:bg-leniant cursor-pointer">Subscribe</Button>
             </form>
           </div>
         </div>
